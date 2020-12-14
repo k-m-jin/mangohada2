@@ -1,63 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=B612+Mono&family=DM+Serif+Display:ital@1&display=swap");
 @import "_variables";
 @import "_elements";
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+
 
 * {
   box-sizing: border-box;
   margin:0;
   padding: 0;
-  border: 1px solid rgb(160, 0, 0);
+}
+html{
+  font-size: 10px;
 }
 
 body {
-  font-family: "B612 Mono", monospace;
-  padding-top: 75px;
-  border: 1px solid blue;
+  font-family: 'NanumSquare', sans-serif,monospace;
+  line-height: 1.4;
+  padding-top: 6.5rem;
   width: auto;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-nav {
-  font-family: "DM Serif Display", serif;
+  margin: 0;
 }
 
 main {
   .header {
     z-index: 3;
-    border: 1px solid rgb(160, 0, 0);
+    border-bottom: .05rem solid rgba(143, 143, 143, 0.205);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 55px;
-    padding: 1rem;
+    height: 7.5rem;
+    padding: 2rem;
     display: flex;
-    background-color: rgb(252, 239, 169);
-    h1 {
-      position: fixed;
-      padding-left: 15px;
-      font-size: 30px;
-      line-height: 1.2;
+    // justify-items: baseline;
+    background-color: white;
+    .logo{
+      top: 0;
+      width: 12rem;
+      height: 5rem;
+      margin-left: 1.5rem;
+     @include mobile(){
+        justify-items: center;
+      }
     }
+   
     nav {
+      width: auto;
       position: fixed;
-      right:120px;
-      top: 50;
-      width: 180px;
+      right: 0;
+      align-self: right;
       line-height: 2;
       ul {
         display: flex;
-       
         li {
-        
           display: flex;
-          justify-content: center;
+          padding-left: 1rem;
+          justify-content: space-between;
           align-items: center;
-          font-size: 18px;
+          font-size: 1.8rem;
           &:first-child {
             span {
               background-color: #e4c464;
@@ -84,11 +97,13 @@ main {
             color: inherit;
             text-decoration: none;
             text-transform: uppercase;
+            transition: 1s;
           }
   
         }
       }
     }
+
     /*.header__photo {
       width: 100%;
       height: 120vh;
@@ -96,31 +111,35 @@ main {
       background-position: center center;
       background-size: cover;
     }*/
+    @include mobile{
+      background-color: rgb(255, 247, 224);
+      
+    }
   }
 }
 .about {
-  padding: 75px;
+  padding-top : 75px;
   display: grid;
   justify-items: center;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
+  background-color: rgb(255, 247, 224);
   .about__header {
     display: flex;
-    font-size: 44px;
+    font-size: 4.4rem;
     h4 {
-      font-size: 40px;
+      font-size: 4rem;
       text-align: center;
     }
   }
   .pencil{
-    width: 100%;
-    height: 550px;
+    width: 55rem;
+    height: auto;
   }
   .about__list {
-    margin-top: 150px;
+    margin-top: 50px;
     display: grid;
     // grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-
     // place-items: center center;
     width: 100%;
     gap: 30px;
@@ -130,7 +149,7 @@ main {
       align-items: center;
       span {
         margin-bottom: 30px;
-        font-size: 12px;
+        font-size: 1.2rem;
       }
     }
   }
@@ -141,11 +160,11 @@ main {
 
 .product {
   
-  margin-top: 120px;
-  margin-bottom: 240px;
+  // margin-top: 120px;
+  margin-bottom: 40px;
   padding: 75px $paddingLeft;
   h2 {
-    font-size: 40px;
+    font-size: 4rem;
     margin-bottom: 60px;
     text-align: center;
   }
@@ -199,18 +218,61 @@ main {
         }
 
       span {
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: 1.5;
       }
     }
   }
 }
 .app{
-  height: 150px;
-  width: auto;
-  
-  border: 1px solid black;
+  display: grid;
+  padding: 3rem;
+  height: 70rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+  .right{
+    grid-row: span 2;
+    align-items: center;
+  }
+  .left_top{
+    grid-column: span 1;
+    text-align: left;
+    align-self:end;
+    h2{
+      font-size: 4rem;
+      color:rgba(255, 57, 57, 0.78);
+    }
+    p{
+      font-size: 3rem;
+      strong{
+        color: rgba(27, 73, 154, 0.87);
+      }
+    }
+  }
+  .left_bottom{
+    grid-column: span 1;
+    align-self: center;
+   display: flex;
+
 }
+  overflow: hidden;
+  width: auto;
+  background-color: rgba(185, 216, 191, 0.507);
+  font-size: 2rem;
+.app_ui{
+  height: 60rem;
+}
+  // &:hover{
+  //   z-index: 2;
+  //   background:rgba(0,0,0,.5);
+  //   // ::after{
+  //   //   content:'2월 출시 예정';
+  //   //   }
+  // }
+}
+
 .btn {
   text-transform: lowercase;
   text-decoration: none;
@@ -224,39 +286,30 @@ main {
   }
 }
 
-.contact{
-  padding: $paddingLeft;
+.contact {
+  padding: 6.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 33vh;
   gap: 60px;
-  .info {
-    list-style-type: none; 
-  }
-  .location__address {
-    font-size: 68px;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    h3 {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-items: center;
-      align-items: center;
-    }
-    border: 1px solid black;
-  }
+  
 }
 
-.contact {
+.contact, .footer{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 200px 0px;
   h4 {
-    font-size: 56px;
+    font-size: 5.6rem;
     margin-bottom: 30px;
+  }
+}
+.footer {
+  padding: 3rem;
+  background-color: rgba(209, 209, 209, 0.562);
+  font-size: 1.5rem;
+  .info {
+    list-style-type: none; 
   }
 }
