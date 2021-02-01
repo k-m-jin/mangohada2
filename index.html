@@ -7,27 +7,29 @@
     <link rel="stylesheet" href="dist/css/styles.css" />
     <link rel=" shortcut icon" href="image/favicon_2.PNG" type="image/x-icon">
     <link rel="icon" href="image/favicon_2.PNG" type="image/x-icon">
+    <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/e654c80b98.js" crossorigin="anonymous"></script>
     <title>망고하다</title>
     <meta name="description" content="당신의 마지막 이야기">
   </head>
   
   <body>
-    <main>
-      <header class="header">
+    <nav class="navbar">
+      <div class="header_logo">
         <img class="logo" src="image/p2.png" alt="mangohadalogo" >
-    
-        <!-- <h1>
-          mangohada
-        </h1> -->
-        <nav>
-          <ul>
-            <li><span></span><a href="#about_here">about</a></li>
-            <li><span></span><a href="#product_here">product</a></li>
-            <li><span></span><a href="#contact_here">contact</a></li>
-          </ul>
-        </nav>
-        </header>
+        <!-- mangohada -->
+      </div>
+      <div class="nav">
+        <ul>
+          <li><span></span><a href="#about_here">about</a></li>
+          <li><span></span><a href="#product_here">product</a></li>
+          <li><span></span><a href="#contact_here">contact</a></li>
+        </ul>
+      </div class="nav">
+      <a href="#" class="navbar__toggleBtn">
+        <i class="fas fa-bars"></i>
+      </a>
+    </nav>
       <section id= "about_here" class="about">
         <div class="about__header">
           <span></span>
@@ -38,7 +40,7 @@
         <img class="pencil" src="image/샘플2.jpg">
         
         <div class="about__list">
-          <div class="about__event"><span>망고망고망고 열대과일망고 달고노란망고</span>Korean Wave</div>
+          <div class="about__event"><span>망고망고망고 열대과일망고 달고노란망고</span>mangohada</div>
           <div class="about__event"><span>망고망고망고 열대과일망고 달고노란망고</span>Korean Wave</div>
         </div>
       </section>
@@ -79,6 +81,17 @@
               >The British Embassy in Seoul said last week it will co-host the conference at the Millennium Hilton Seoul with the Korea Society of Automotive Engineers, Institute of Electronics and Information Engineers, Korean Institute of 
               </span>
           </div>
+          <div class="product__column">
+            <div class="screen">
+              <div class="p_name">일몰</div>
+              <div class="img__wrapper">
+                <img src="image/sunset.jpg" />
+              </div> 
+            </div>
+            <span
+              >The British Embassy in Seoul said last week it will co-host the conference at the Millennium Hilton Seoul with the Korea Society of Automotive Engineers, Institute of Electronics and Information Engineers, Korean Institute of 
+            </span>
+          </div>
         </div>
       </section>
       
@@ -116,7 +129,5 @@
           <li>Copyright &copy; mangohada. All Rights Reserved.</li>
         </ul>
       </footer>
-      
-    </main>
   </body>
 </html>
