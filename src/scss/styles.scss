@@ -42,7 +42,7 @@ a {
 img{
   width: 100%;
   height: 100%;
-  margin: 0;
+  margin-bottom: 5rem;
   // border: solid;
 }
   .navbar {
@@ -154,26 +154,14 @@ img{
   }
 
 .about {
-  padding-top : 75px;
-  display: grid;
-  justify-items: center;
-  // background-color: rgb(255, 247, 224);
-  
-  
-  .btn {
-    margin-top: 120px;
-  }
+  height: 100vh;
 }
 
 .product {
   
-  // margin-top: 120px;
   }
 
 .app{
- 
-  
-
 
 }
 
@@ -191,7 +179,7 @@ img{
 }
 
 .contact {
-  padding: 6.5rem;
+  // padding: 6.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 33vh;
