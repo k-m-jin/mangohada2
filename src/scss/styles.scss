@@ -44,14 +44,14 @@ img{
   height: 100%;
   // border: solid;
 }
-  .navbar {
+
+.header {
+    // padding: 0.8rem 1.2rem;
     display: flex;
     justify-content: space-between;
     border-bottom: .05rem solid rgba(143, 143, 143, 0.205);
     top: 0;
     left: 0;
-    // height: 7.5rem;
-    padding: 0.8rem 1.2rem;
     background-color: white;
     position: fixed;
     width: 100%;
@@ -63,14 +63,12 @@ img{
       flex-direction: column;
       align-items: flex-start;
     }
-    .logo{
-      top: 0;
-      width: 12rem;
-      height: 5rem;
-      margin-left: 1.5rem;
-      display: flex;
+
+    .header_logo{
+      font-size: 2.2rem;
+      letter-spacing: 0.3rem;
+      padding-left: 2rem;
     }
-    
     .nav {
       width: auto;
       // position: fixed; 포지션을 설정하면 nav에서 밖으로 나와짐
@@ -92,7 +90,7 @@ img{
         }
         li {
           display: flex;
-          padding: 0.8rem 1.2rem;
+          padding: 0rem 1.2rem;
           justify-content: space-between;
           align-items: center;
           font-size: 1.8rem;
@@ -129,13 +127,6 @@ img{
       }
     }
 
-    /*.header__photo {
-      width: 100%;
-      height: 120vh;
-      background-image: url("https://source.unsplash.com/random/12");
-      background-position: center center;
-      background-size: cover;
-    }*/
     @include mobile{
       background-color: rgb(255, 247, 224);
       
@@ -146,11 +137,15 @@ img{
       right: 32px;
       font-size: 24px;
       color: black;
+      padding-top: 1.5rem;
       @include tablet(){
         display: block;
       }
     }
   }
+ ////////////////////////////////////////////////////header///////////
+  
+
 
 .about {
   padding-top : 75px;
@@ -303,13 +298,7 @@ img{
 .app_ui{
   height: 60rem;
 }
-  // &:hover{
-  //   z-index: 2;
-  //   background:rgba(0,0,0,.5);
-  //   // ::after{
-  //   //   content:'2월 출시 예정';
-  //   //   }
-  // }
+  
 }
 
 .btn {
