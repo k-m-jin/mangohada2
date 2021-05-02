@@ -3,6 +3,19 @@
 @import "_elements";
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
+@font-face {
+  font-family: 'OTEnjoystoriesBA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cafe24Shiningstar';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @mixin mobile {
   @media (max-width: #{$mobile}) {
     @content;
@@ -38,11 +51,6 @@ a {
   color: inherit;
   text-decoration: underline;
   transition: 1s;
-}
-img{
-  width: 100%;
-  height: 100%;
-  // border: solid;
 }
 
 .header {
@@ -143,163 +151,195 @@ img{
       }
     }
   }
- ////////////////////////////////////////////////////header///////////
-  
 
+// ////////////image///////////////
+.about{
+  width: 100%;
+}
+.about_main1{
+  height: 70rem;
+  position: relative;
+  .fade-in{
+    position: absolute;
+    opacity: 0;
 
-.about {
-  padding-top : 75px;
-  display: grid;
-  justify-items: center;
-  // background-color: rgb(255, 247, 224);
-  .about__header {
-    display: flex;
-    font-size: 4.4rem;
-    h4 {
-      font-size: 4rem;
-      text-align: center;
-    }
-    // .about_main{
-    // height: 50rem;
-    // width: 100%;
-    // background-image: url(../image/homepage_main4.png);
-    // background-size: cover;
-    // background-position: center;
-    // }
   }
-  
-  
-  .about__list {
-    margin-top: 50px;
-    display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    // place-items: center center;
-    width: 100%;
-    gap: 30px;
-    .about__event {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      span {
-        margin-bottom: 30px;
-        font-size: 1.2rem;
-      }
-    }
+  .cats{
+    right: 0;
+    bottom: 1rem;
   }
-  .btn {
-    margin-top: 120px;
+  .text1{
+    left: 350px;
+    bottom: 450px;
+  }
+  .mangohada{
+    left: 650px;
+   bottom: 450px;
+  }
+  .text2 {
+    left: 220px;
+    bottom: 250px;
+  }
+  .quotes{
+    left: 200px;
+    bottom: 100px;
+  }
+
+}
+.about_main2{
+  height: 70rem;
+  background-image: url("/image/Layer_1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  position: relative;
+  .about_main2_text{
+    // margin:0 auto;
+    h1{
+      font-family: 'Cafe24Shiningstar';
+      font-size: 6rem;
+      position: absolute;
+      margin-bottom: 3rem;
+      left: 380px;
+      top: 180px;
+      letter-spacing: 3px;
+    }
+    p{
+      position: absolute;
+      font-size: 3rem;
+      line-height: 2;
+      left: 350px;
+      top: 310px;
+    }
   }
 }
-
-.product {
-  
-  // margin-top: 120px;
-  margin-bottom: 40px;
-  padding: 75px $paddingLeft;
-  h2 {
-    font-size: 4rem;
-    margin-bottom: 60px;
-    text-align: center;
+.about_main3{
+  width: 100%;
+  height: 70rem;
+  font-size: 3rem;
+  padding: 10rem 0;
+  background-color: #eef5fd;
+  .about3_list{
+    margin: 0 auto;
+    width: 850px;
   }
-  .product__columns {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 60px;
+  .about3_list_item{
+    display: flex;
+    align-items: center;
+    margin: 3rem;
     
-    .product__column {
-      // ??밑에 설정값이 있으면 product의 마진 값이 적용되지 않음
-      // height: 400px;
-      // width: 400px;
-      display: grid;
-      grid-template-rows: 650px 20%;
-      gap: 30px;
-      z-index: 1;
-      .screen{
-        position: relative;
-        overflow: hidden;
-        margin: 0 auto;
-        height: 600px;
-        ::after{
-          content:'';
-          display:block;
-          position:absolute;
-          top:0; left:0; 
-          width:100%; height:100%; 
-          background:rgba(0,0,0,.5);
-          z-index:1;
-          opacity:0;
-        }
-        &:hover{
-          // filter: blur(2px);
-          .p_name{bottom: 50%;}
-          ::after{opacity: 1;}
-        }
-        .p_name{
-          position: absolute;
-          bottom: 150%;
-          text-align: center;
-          color: white;
-          z-index: 2;
-        }
-        .img__wrapper {
-          // overflow: hidden;
-          img {
-            max-width: 100%;
-            height: 600px;
-            }
-          }
-        }
-
-      span {
-        font-size: 1.2rem;
-        line-height: 1.5;
-      }
+    .icon{
+      width: 7rem;
+      height: 7rem;
+      background-size: no-repeat;
+      background-size: cover;
+      margin-right: 1rem;
     }
+    
+  }
+  .about3_icon_1{
+    
+    background-image: url("/image/sc/Asset 3.png");
+
+  }
+  .about3_icon_2{
+    
+    background-image: url("/image/sc/Asset 7.png");
+  }
+  .about3_icon_3{
+   
+    background-image: url("/image/sc/Asset 5.png");
+   
+  }
+  
+  .about3_text{
+    font-family: 'Cafe24Shiningstar';
+    font-size: 5rem;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    
+    mark{
+      background-color: #FFE285;
+      border-radius: 3rem;
+    }
+  }
+  
+}
+
+.img_sample{
+  width: 100%;
+  height: 100%;
+}
+.product{
+  height: 70rem;
+  position: relative;
+
+  .product_book{
+    position: absolute;
+    right: 80px;
+    bottom: 5rem;
+  }
+  .product_text{
+    font-size: 3.5rem;
+    position: absolute;
+    top: 300px;
+    right: 500px;
+    line-height: 1.5;
+  }
+  .product_moon{
+    position: absolute;
+    top: 200px;
+    left: 250px;
+  }
+  .product_road{
+    position: absolute;
+    bottom: 0;
+    right: -20px;
   }
 }
 .app{
-  // display: grid;
-  padding: 3rem;
-  height: 70rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  align-items: center;
-  gap: 1rem;
-  .right{
-    grid-row: span 2;
-    align-items: center;
-  }
-  .left_top{
-    grid-column: span 1;
-    text-align: left;
-    align-self:end;
-    h2{
-      font-size: 4rem;
-      color:rgba(255, 57, 57, 0.78);
-    }
-    p{
-      font-size: 3rem;
-      strong{
-        color: rgba(27, 73, 154, 0.87);
-      }
-    }
-  }
-  .left_bottom{
-    grid-column: span 1;
-    align-self: center;
-   display: flex;
-
-}
-  overflow: hidden;
-  width: auto;
+  position: relative;
   background-color: rgba(185, 216, 191, 0.507);
   font-size: 2rem;
-.app_ui{
-  height: 60rem;
+  height: 70rem;
+
+  .app_text{
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 2;
+    position: absolute;
+    top: 250px;
+    left: 310px;
+
+    .app_subtext{
+    font-size: 2.2rem;
+    color: #888;
+    position: absolute;
+    margin-top: -20px;
+    }
+  }  
+  .app_phone{
+    height: 60rem;
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+  }
+  .app_book{
+    position: absolute;
+    top: 100px;
+    left: 500px;
+  }
+  .btn_link{
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 100px;
+      left: 300px;
+    }
+    
 }
-  
-}
+
 
 .btn {
   text-transform: lowercase;
